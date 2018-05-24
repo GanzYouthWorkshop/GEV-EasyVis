@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EF8D02D-E32E-4441-B8D3-C53961A2EF81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEV.EasyVis</RootNamespace>
+    <AssemblyName>GEV EasyVis</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cognex.Cnx.CioMicro, Version=5.5.0.112, Culture=neutral, PublicKeyToken=e40fe3b96eeca5de, processorArchitecture=x86" />
+    <Reference Include="Cognex.InSight, Version=5.5.798.0, Culture=neutral, PublicKeyToken=6b9774afddb09935, processorArchitecture=x86" />
+    <Reference Include="Cognex.InSight.Controls.Display, Version=5.5.798.0, Culture=neutral, PublicKeyToken=6b9774afddb09935, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GUI\Controls\ColorButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\ColorButton.Designer.cs">
+      <DependentUpon>ColorButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ColorPickerButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\ColorPickerButton.Designer.cs">
+      <DependentUpon>ColorPickerButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Controls\ColorPickerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Controls\ColorPickerControl.Designer.cs">
+      <DependentUpon>ColorPickerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FontSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FontSettings.Designer.cs">
+      <DependentUpon>FontSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FontToolkit.cs" />
+    <Compile Include="GUI\GraphicsToolkit.cs" />
+    <Compile Include="GUI\InSightEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\InSightEditor.Designer.cs">
+      <DependentUpon>InSightEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\AlignmentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\AlignmentPage.Designer.cs">
+      <DependentUpon>AlignmentPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\BorderPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\BorderPage.Designer.cs">
+      <DependentUpon>BorderPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\FillPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\FillPage.Designer.cs">
+      <DependentUpon>FillPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\FormatPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\FormatPage.Designer.cs">
+      <DependentUpon>FormatPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\CellFormatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CellFormatForm.Designer.cs">
+      <DependentUpon>CellFormatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\ProtectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\PropertyPages\ProtectionPage.Designer.cs">
+      <DependentUpon>ProtectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\ColorControls\ColorComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\ColorControls\ColorPickerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\ColorControls\ColorPickerPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\ColorControls\ColorPickerToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\ColorControls\ColorPickerWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\ColoredListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FillPatternComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FlatTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FontControls\FontDropDownControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FontControls\FontListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FontControls\FontSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FontControls\FontSettingsControl.designer.cs">
+      <DependentUpon>FontSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FontControls\FontToolStripDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\FormLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\LineControls\LineStyleControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\LineControls\LineWeightControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ReoGrid\UIControls\TextRotateControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Controls\ColorButton.resx">
+      <DependentUpon>ColorButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\ColorPickerButton.resx">
+      <DependentUpon>ColorPickerButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Controls\ColorPickerControl.resx">
+      <DependentUpon>ColorPickerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FontSettings.resx">
+      <DependentUpon>FontSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InSightEditor.resx">
+      <DependentUpon>InSightEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReoGrid\PropertyPages\AlignmentPage.resx">
+      <DependentUpon>AlignmentPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReoGrid\PropertyPages\BorderPage.resx">
+      <DependentUpon>BorderPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReoGrid\PropertyPages\FillPage.resx">
+      <DependentUpon>FillPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReoGrid\PropertyPages\FormatPage.resx">
+      <DependentUpon>FormatPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CellFormatForm.resx">
+      <DependentUpon>CellFormatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReoGrid\PropertyPages\ProtectionPage.resx">
+      <DependentUpon>ProtectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ReoGrid\UIControls\FontControls\FontSettingsControl.resx">
+      <DependentUpon>FontSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\GEV-Control-Layouts\src\GEV Control Layouts Plus\GEV Control Layouts Plus.csproj">
+      <Project>{d93e1488-f699-411a-852f-858bc268f87c}</Project>
+      <Name>GEV Control Layouts Plus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GEV-Control-Layouts\src\GEV Control Layouts\GEV Control Layouts.csproj">
+      <Project>{677bbe0e-f8c8-4af3-a398-ed0ce7c22e69}</Project>
+      <Name>GEV Control Layouts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DeviceHandlers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
