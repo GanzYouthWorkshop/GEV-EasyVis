@@ -37,6 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Cognex.Cnx.CioMicro, Version=4.3.324.0, Culture=neutral, PublicKeyToken=e40fe3b96eeca5de, processorArchitecture=x86" />
+    <Reference Include="Cognex.DataMan.SDK.PC">
+      <HintPath>..\..\dll\Cognex.DataMan.SDK.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.Utils.PC">
+      <HintPath>..\..\dll\Cognex.DataMan.SDK.Utils.PC.dll</HintPath>
+    </Reference>
     <Reference Include="Cognex.InSight, Version=5.3.722.0, Culture=neutral, PublicKeyToken=6b9774afddb09935, processorArchitecture=x86" />
     <Reference Include="Cognex.InSight.Controls.Display, Version=5.3.722.0, Culture=neutral, PublicKeyToken=6b9774afddb09935, processorArchitecture=x86" />
     <Reference Include="System" />
@@ -53,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeviceHandlers\ConnectionState.cs" />
+    <Compile Include="DeviceHandlers\DatamanSensor.cs" />
     <Compile Include="DeviceHandlers\IDeviceHandler.cs" />
     <Compile Include="DeviceHandlers\InsightSensor.cs" />
     <Compile Include="GUI\CairoExtensions.cs" />
