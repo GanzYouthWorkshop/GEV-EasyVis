@@ -35,6 +35,7 @@
             this.gclWindowGrab1 = new GEV.Layouts.GCLWindowGrab();
             this.tabsMenu = new GEV.Layouts.GCLTabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.btnRotateText = new GEV.Layouts.GCLButton();
             this.lnkAlignmentSettings = new System.Windows.Forms.LinkLabel();
             this.chkMerge = new GEV.Layouts.GCLToggleButton();
@@ -79,9 +80,9 @@
             this.txtFormula = new GEV.Layouts.GCLTextbox();
             this.gclToggleButton2 = new GEV.Layouts.GCLToggleButton();
             this.gclComboBox1 = new GEV.Layouts.GCLComboBox();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.gclToolTip1 = new GEV.Layouts.GCLToolTip(this.components);
             this.cspTable = new GEV.Layouts.Extended.Cairo.CairoSpreadsheet();
+            this.gclButton1 = new GEV.Layouts.GCLButton();
             this.colorPickerButton2 = new Cairo_Editor.Controls.ColorPickerButton();
             this.colorPickerButton1 = new Cairo_Editor.Controls.ColorPickerButton();
             this.cpbSpecialColor2 = new Cairo_Editor.Controls.ColorPickerButton();
@@ -201,6 +202,21 @@
             this.tabGeneral.TabIndex = 0;
             this.tabGeneral.Text = "Általlános";
             // 
+            // linkLabel3
+            // 
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(87)))), ((int)(((byte)(152)))));
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Enabled = false;
+            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.linkLabel3.Location = new System.Drawing.Point(649, 111);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(51, 13);
+            this.linkLabel3.TabIndex = 24;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Speciális";
+            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(177)))), ((int)(((byte)(87)))));
+            // 
             // btnRotateText
             // 
             this.btnRotateText.BackColor = System.Drawing.Color.White;
@@ -226,7 +242,7 @@
             this.lnkAlignmentSettings.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(177)))), ((int)(((byte)(87)))));
             this.lnkAlignmentSettings.Location = new System.Drawing.Point(422, 111);
             this.lnkAlignmentSettings.Name = "lnkAlignmentSettings";
-            this.lnkAlignmentSettings.Size = new System.Drawing.Size(73, 19);
+            this.lnkAlignmentSettings.Size = new System.Drawing.Size(62, 13);
             this.lnkAlignmentSettings.TabIndex = 19;
             this.lnkAlignmentSettings.TabStop = true;
             this.lnkAlignmentSettings.Text = "Elrendezés";
@@ -310,7 +326,7 @@
             this.lnkFontSettings.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(177)))), ((int)(((byte)(87)))));
             this.lnkFontSettings.Location = new System.Drawing.Point(104, 111);
             this.lnkFontSettings.Name = "lnkFontSettings";
-            this.lnkFontSettings.Size = new System.Drawing.Size(67, 19);
+            this.lnkFontSettings.Size = new System.Drawing.Size(57, 13);
             this.lnkFontSettings.TabIndex = 14;
             this.lnkFontSettings.TabStop = true;
             this.lnkFontSettings.Text = "Betűtípus";
@@ -368,7 +384,7 @@
         "48",
         "72",
         "96"};
-            this.cbxFontSize.Size = new System.Drawing.Size(59, 26);
+            this.cbxFontSize.Size = new System.Drawing.Size(59, 22);
             this.cbxFontSize.Soreted = false;
             this.cbxFontSize.TabIndex = 11;
             this.cbxFontSize.Text = "7";
@@ -537,6 +553,7 @@
             this.chkUnderline.Size = new System.Drawing.Size(26, 26);
             this.chkUnderline.TabIndex = 2;
             this.chkUnderline.Text = "";
+            this.chkUnderline.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkUnderline.UseThemeColors = true;
             this.chkUnderline.UseVisualStyleBackColor = false;
             this.chkUnderline.CheckedChanged += new System.EventHandler(this.chkUnderline_CheckedChanged);
@@ -557,6 +574,7 @@
             this.chkItalic.Size = new System.Drawing.Size(26, 26);
             this.chkItalic.TabIndex = 1;
             this.chkItalic.Text = "";
+            this.chkItalic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkItalic.UseThemeColors = true;
             this.chkItalic.UseVisualStyleBackColor = false;
             this.chkItalic.CheckedChanged += new System.EventHandler(this.chkItalic_CheckedChanged);
@@ -577,6 +595,7 @@
             this.chkBold.Size = new System.Drawing.Size(26, 26);
             this.chkBold.TabIndex = 0;
             this.chkBold.Text = "";
+            this.chkBold.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.gclToolTip1.SetToolTip(this.chkBold, "Félkövér");
             this.chkBold.UseThemeColors = true;
             this.chkBold.UseVisualStyleBackColor = false;
@@ -682,7 +701,7 @@
             this.chkShowTrace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chkShowTrace.Location = new System.Drawing.Point(895, 16);
             this.chkShowTrace.Name = "chkShowTrace";
-            this.chkShowTrace.Size = new System.Drawing.Size(157, 23);
+            this.chkShowTrace.Size = new System.Drawing.Size(133, 17);
             this.chkShowTrace.TabIndex = 37;
             this.chkShowTrace.Text = "Referenciák mutatása";
             this.chkShowTrace.UseThemeColors = false;
@@ -925,7 +944,7 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.linkLabel2.Location = new System.Drawing.Point(1291, 108);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(39, 19);
+            this.linkLabel2.Size = new System.Drawing.Size(32, 13);
             this.linkLabel2.TabIndex = 25;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Teszt";
@@ -940,7 +959,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.linkLabel1.Location = new System.Drawing.Point(277, 108);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 19);
+            this.linkLabel1.Size = new System.Drawing.Size(58, 13);
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Cellatípus";
@@ -981,6 +1000,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.flpDevices);
             this.flowLayoutPanel1.Controls.Add(this.btnAddDevice);
+            this.flowLayoutPanel1.Controls.Add(this.gclButton1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -1013,6 +1033,7 @@
             this.btnAddDevice.Text = "\r\nHozzáadás...";
             this.btnAddDevice.UseThemeColors = true;
             this.btnAddDevice.UseVisualStyleBackColor = false;
+            this.btnAddDevice.Click += new System.EventHandler(this.btnAddDevice_Click);
             // 
             // btnShowMenu
             // 
@@ -1134,25 +1155,10 @@
         "48",
         "72",
         "96"};
-            this.gclComboBox1.Size = new System.Drawing.Size(59, 23);
+            this.gclComboBox1.Size = new System.Drawing.Size(59, 21);
             this.gclComboBox1.Soreted = false;
             this.gclComboBox1.TabIndex = 11;
             this.gclComboBox1.Text = "7";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(87)))), ((int)(((byte)(152)))));
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Enabled = false;
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-            this.linkLabel3.Location = new System.Drawing.Point(649, 111);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(59, 19);
-            this.linkLabel3.TabIndex = 24;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Speciális";
-            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(177)))), ((int)(((byte)(87)))));
             // 
             // gclToolTip1
             // 
@@ -1182,10 +1188,29 @@
             this.cspTable.TabIndex = 3;
             this.cspTable.Text = "cairoSpreadsheet1";
             // 
+            // gclButton1
+            // 
+            this.gclButton1.BackColor = System.Drawing.Color.White;
+            this.gclButton1.Checked = false;
+            this.gclButton1.FlatAppearance.BorderColor = System.Drawing.Color.Gainsboro;
+            this.gclButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(177)))), ((int)(((byte)(87)))));
+            this.gclButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(200)))), ((int)(((byte)(125)))));
+            this.gclButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gclButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.gclButton1.Location = new System.Drawing.Point(102, 3);
+            this.gclButton1.Name = "gclButton1";
+            this.gclButton1.Size = new System.Drawing.Size(75, 23);
+            this.gclButton1.TabIndex = 2;
+            this.gclButton1.Text = "gclButton1";
+            this.gclButton1.UseThemeColors = true;
+            this.gclButton1.UseVisualStyleBackColor = false;
+            this.gclButton1.Click += new System.EventHandler(this.gclButton1_Click);
+            // 
             // colorPickerButton2
             // 
             this.colorPickerButton2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.colorPickerButton2.Location = new System.Drawing.Point(690, 40);
+            this.colorPickerButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.colorPickerButton2.Name = "colorPickerButton2";
             this.colorPickerButton2.Size = new System.Drawing.Size(36, 26);
             this.colorPickerButton2.Symbol = "❹";
@@ -1195,6 +1220,7 @@
             // 
             this.colorPickerButton1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.colorPickerButton1.Location = new System.Drawing.Point(648, 40);
+            this.colorPickerButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.colorPickerButton1.Name = "colorPickerButton1";
             this.colorPickerButton1.Size = new System.Drawing.Size(36, 26);
             this.colorPickerButton1.Symbol = "❸";
@@ -1204,6 +1230,7 @@
             // 
             this.cpbSpecialColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.cpbSpecialColor2.Location = new System.Drawing.Point(690, 8);
+            this.cpbSpecialColor2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cpbSpecialColor2.Name = "cpbSpecialColor2";
             this.cpbSpecialColor2.Size = new System.Drawing.Size(36, 26);
             this.cpbSpecialColor2.Symbol = "❷";
@@ -1214,6 +1241,7 @@
             // 
             this.cpbSpecialColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.cpbSpecialColor1.Location = new System.Drawing.Point(648, 8);
+            this.cpbSpecialColor1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cpbSpecialColor1.Name = "cpbSpecialColor1";
             this.cpbSpecialColor1.Size = new System.Drawing.Size(36, 26);
             this.cpbSpecialColor1.Symbol = "❶";
@@ -1224,6 +1252,7 @@
             // 
             this.cpbBackColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.cpbBackColor.Location = new System.Drawing.Point(228, 6);
+            this.cpbBackColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cpbBackColor.Name = "cpbBackColor";
             this.cpbBackColor.Size = new System.Drawing.Size(36, 26);
             this.cpbBackColor.Symbol = "⬛";
@@ -1234,6 +1263,7 @@
             // 
             this.cpbForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.cpbForeColor.Location = new System.Drawing.Point(186, 6);
+            this.cpbForeColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cpbForeColor.Name = "cpbForeColor";
             this.cpbForeColor.Size = new System.Drawing.Size(36, 26);
             this.cpbForeColor.Symbol = "";
@@ -1254,10 +1284,10 @@
             this.cbxFont.Name = "cbxFont";
             this.cbxFont.SelectedIndex = 0;
             this.cbxFont.SimpleItems = null;
-            this.cbxFont.Size = new System.Drawing.Size(216, 26);
+            this.cbxFont.Size = new System.Drawing.Size(216, 22);
             this.cbxFont.Soreted = false;
             this.cbxFont.TabIndex = 10;
-            this.cbxFont.Text = "AA_Cronos_Hun";
+            this.cbxFont.Text = "Agency FB";
             this.cbxFont.ValueMember = "Name";
             this.cbxFont.SelectedValueChanged += new System.EventHandler(this.cbxFont_SelectedValueChanged);
             // 
@@ -1275,14 +1305,14 @@
             this.fontDropDownControl1.Name = "fontDropDownControl1";
             this.fontDropDownControl1.SelectedIndex = 0;
             this.fontDropDownControl1.SimpleItems = null;
-            this.fontDropDownControl1.Size = new System.Drawing.Size(216, 23);
+            this.fontDropDownControl1.Size = new System.Drawing.Size(216, 21);
             this.fontDropDownControl1.Soreted = false;
             this.fontDropDownControl1.TabIndex = 10;
             this.fontDropDownControl1.Text = "fontDropDownControl1";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 676);
             this.Controls.Add(this.cspTable);
@@ -1368,6 +1398,7 @@
         private Cairo_Editor.Controls.ColorPickerButton colorPickerButton2;
         private Cairo_Editor.Controls.ColorPickerButton colorPickerButton1;
         private Layouts.GCLToolTip gclToolTip1;
+        private Layouts.GCLButton gclButton1;
     }
 }
 

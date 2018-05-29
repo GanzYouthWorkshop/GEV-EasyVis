@@ -1,4 +1,5 @@
-﻿using GEV.EasyVis.GUI;
+﻿using GEV.EasyVis.DeviceHandlers;
+using GEV.EasyVis.GUI;
 using GEV.Layouts;
 using GEV.Layouts.Extended.Cairo;
 using GEV.Layouts.Extended.Cairo.Actions;
@@ -27,12 +28,34 @@ namespace GEV.EasyVis
         {
             InitializeComponent();
 
+            CairoExtensions.Setup();
+
             this.cspTable.CurrentWorksheetChanged += OnWorkSheetChanged;
             this.m_CurrentWorkSheet = this.cspTable.CurrentWorksheet;
             this.m_CurrentWorkSheet.BeforeSelectionRangeChange += OnSelectionChanging; ;
             this.m_CurrentWorkSheet.SelectionRangeChanged += OnSelectionChanged;
 
             this.m_CurrentWorkSheet.CellDataChanged += OnCellDataChanged;
+
+            VisionSystem.Project = new Project();
+            VisionSystem.Project.Devices.Add(new InsightSensor("192.168.90.215", "admin", ""));
+            VisionSystem.Project.Devices[0].Name = "test";
+            VisionSystem.Project.Devices[0].Connect();
+            (VisionSystem.Project.Devices[0] as InsightSensor).ResultsChanged += MainForm_ResultsChanged;
+        }
+
+        private void MainForm_ResultsChanged(object sender, EventArgs e)
+        {
+            this.cspTable.CurrentWorksheet.IterateCells((row, col, cell) =>
+            {
+                if (cell.Formula != null && cell.Formula.Contains("INSIGHT("))
+                {
+                    string f = cell.Formula;
+                    cell.Formula = "";
+                    cell.Formula = f;
+                }
+                return true;
+            });
         }
 
         #region Spreadsheetselection related events
@@ -434,6 +457,17 @@ namespace GEV.EasyVis
 
         private void cpbSpecialColor1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAddDevice_Click(object sender, EventArgs e)
+        {
+            new InSightEditor(VisionSystem.Project.Devices[0] as InsightSensor).Show();
+        }
+
+        private void gclButton1_Click(object sender, EventArgs e)
+        {
+            (VisionSystem.Project.Devices[0] as InsightSensor).Trigger(); ;
 
         }
     }

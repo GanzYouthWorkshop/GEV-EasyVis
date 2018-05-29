@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GEV.EasyVis.DeviceHandlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,7 @@ namespace GEV.EasyVis
     [Serializable]
     public class Project
     {
-        //public PLC PLC;
-        //public List<object> Devices;
-        //public string Name { get; set; }
+        public List<IDeviceHandler> Devices { get; } = new List<IDeviceHandler>();
+        public string Name { get; set; }
     }
 }

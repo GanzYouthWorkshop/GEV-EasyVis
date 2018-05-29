@@ -32,6 +32,12 @@ namespace Cairo_Editor.Controls
             InitializeComponent();
 
             this.ColorPicker.ColorSelected += ColorPicker_ColorSelected;
+            this.gclButton2.LostFocus += GclButton2_LostFocus;
+        }
+
+        private void GclButton2_LostFocus(object sender, EventArgs e)
+        {
+            this.ColorPicker.Hide();
         }
 
         private void ColorPicker_ColorSelected(object sender, Color e)
