@@ -1,5 +1,6 @@
 ﻿using GEV.EasyVis.DeviceHandlers;
 using GEV.EasyVis.GUI;
+using GEV.EasyVis.GUI.Cairo;
 using GEV.Layouts;
 using GEV.Layouts.Extended.Cairo;
 using GEV.Layouts.Extended.Cairo.Actions;

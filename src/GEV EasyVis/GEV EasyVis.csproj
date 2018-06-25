@@ -62,7 +62,8 @@
     <Compile Include="DeviceHandlers\DatamanSensor.cs" />
     <Compile Include="DeviceHandlers\IDeviceHandler.cs" />
     <Compile Include="DeviceHandlers\InsightSensor.cs" />
-    <Compile Include="GUI\CairoExtensions.cs" />
+    <Compile Include="GUI\Cairo\CairoExtensions.cs" />
+    <Compile Include="GUI\Cairo\FormatableCell.cs" />
     <Compile Include="GUI\Controls\ColorButton.cs">
       <SubType>UserControl</SubType>
     </Compile>

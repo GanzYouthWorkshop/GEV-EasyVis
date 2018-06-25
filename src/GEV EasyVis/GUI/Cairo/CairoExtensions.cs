@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GEV.EasyVis.GUI
+namespace GEV.EasyVis.GUI.Cairo
 {
     public class CairoExtensions
     {
